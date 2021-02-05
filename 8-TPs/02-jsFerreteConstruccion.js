@@ -43,6 +43,10 @@ function Materiales ()
 {
     var largoDelTerreno;
     var anchoDelTerreno;
+    var area;
+    var cemento
+    var cal
+
 
     largoDelTerreno=document.getElementById('txtIdLargo').value;
     largoDelTerreno=parseInt(largoDelTerreno);
@@ -50,5 +54,11 @@ function Materiales ()
     anchoDelTerreno=document.getElementById('txtIdAncho').value;
     anchoDelTerreno=parseInt(anchoDelTerreno);
 
+    area=largoDelTerreno*anchoDelTerreno;
+
+    cemento=area*2
+    cal=area*3
+
+    alert("Usted necesita "+cemento+" bolsas de cemento y "+cal+" bolsas de cal.")
 
 }
