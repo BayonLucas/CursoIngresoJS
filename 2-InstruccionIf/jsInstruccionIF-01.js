@@ -9,8 +9,25 @@ function mostrar()
 	edad=parseInt(edad);
 	console.log("La edad es: " + edad); //Sale dato
 	
-	if(edad == 15)
+/*	if(edad == 15)
 	{
 		alert("niña bonita");
-	}	
+	}
+*/
+	if(true){
+		alert("Verdadero");
+	}else{
+		alert("Falso");
+	}
+	/*
+	verdaderos:
+		1
+		"1"
+		"0"
+		"cualquier texto"
+		true
+	falsos:
+		0	
+		false
+*/
 }//FIN DE LA FUNCIÓN
