@@ -74,7 +74,7 @@ function mostrar()
 		}
 		else //Caso contrario a ambas condiciones ya mencionadas ...
 		{
-				alert("Es adolecente");
+			alert("Es adolecente");
 		}
 	}
 //Cuando hay 3 condicionales, dejar que el mas complejo se resuelva por descarte. 	
