@@ -86,7 +86,9 @@ function CalcularPrecio ()
 //Punto E
 //Estoy repreguntando mucho
 
-//Nuevo intento
+/*
+//--------------------------------------Nuevo intento----------------------------------
+
 if(cantidadDeLamparas>5)
 {
     porcentaje=50;
@@ -141,6 +143,170 @@ else
         }   
     }
 }
+*/
+
+//Ferrete iluminancion solo SWITCH (la parte del descuento)
+/*
+switch(cantidadDeLamparas)
+{
+    case 5:
+        switch(marca)
+        {
+            case "ArgentinaLuz":
+                porcentaje=40;
+                break;
+            default:
+                porcentaje=30;
+                break;
+        }
+        break;
+    case 4:
+        switch(marca)
+        {
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+                porcentaje=25;
+                break;
+            default:
+                porcentaje=20;
+                break;
+        }
+        break;
+    case 3:
+        switch(marca)
+        {
+            case "ArgentinaLuz":
+                porcentaje=15;
+                break;
+            case "FelipeLamparas":
+                porcentaje=10;
+                break;
+            default:
+                porcentaje=5;
+                break;
+        }
+        break;
+    case 1:
+    case 2:
+        porcentaje=0;
+        break; 
+    default:
+        porcentaje=50;
+        break;
+}
+*/
+
+//Ferrete iluminancion Con switch(cantidad) y if (marca)
+/*
+switch(cantidadDeLamparas)
+{
+    case 5:
+        if(marca=="ArgentinaLuz")
+        {
+           porcentaje=40;
+        }
+        else
+        {
+            porcentaje=30;
+        }
+        break;
+    case 4:
+        if((marca=="ArgentinaLuz")||(marca=="FelipeLamparas"))
+        {
+            porcentaje=25;
+        }
+        else
+        {
+            porcentaje=20;
+        }            
+        break;
+    case 3:
+        if(marca=="ArgentinaLuz")
+        {
+            porcentaje=15;
+        }
+        else
+        {
+            if(marca=="FelipeLamparas")
+            {
+                porcentaje=10;
+            }
+            else
+            {
+                porcentaje=5;
+            }    
+        }
+        break;
+    case 1:
+    case 2:
+        porcentaje=0;
+        break; 
+    default:
+        porcentaje=50;
+        break;
+}
+*/
+
+//Ferrete iluminancion Con if (cantidad) y switch (marca)
+
+if(cantidadDeLamparas>5)
+{
+    porcentaje=50;
+}
+else
+{
+    if(cantidadDeLamparas==5)
+    {
+        switch(marca)
+        {
+            case "ArgentinaLuz":
+                porcentaje=40;
+                break;
+            default:
+                porcentaje=30;
+                break;
+        }
+    }
+    else
+    {
+        if(cantidadDeLamparas==4)
+        {
+            switch(marca)
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    porcentaje=25;
+                    break;
+                default:
+                    porcentaje=20;
+                    break;
+            }
+        }
+        else
+        {
+            if(cantidadDeLamparas==3)
+            {
+                switch(marca)
+                {
+                    case "ArgentinaLuz":
+                        porcentaje=15;
+                        break;
+                    case "FelipeLamparas":
+                        porcentaje=10;
+                        break;
+                    default:
+                        porcentaje=5;
+                        break;
+                }
+            }
+            else
+            {
+                porcentaje=0;
+            }
+        }
+    }      
+}
+
 //El final    
     console.log("Marca: "+marca+". Precio = $"+precioTotal+". Descuento: "+porcentaje+"%.");
     precioConDescuento=precioTotal-(precioTotal*porcentaje/100);
@@ -148,9 +314,7 @@ else
     
     
     impuestoIIBB=precioConDescuento*10/100;
-
     totalConImpuesto=precioConDescuento+impuestoIIBB;
-
 
     if(precioConDescuento>120);
     {
