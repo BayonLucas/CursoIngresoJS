@@ -29,8 +29,8 @@ ej.: "Usted se llama José y tiene 66 años" 	*/
  "Perez , usted se llama jose y tiene 66 años"
 se debe optener el apellido , de la manera que puedan*/
 
-function mostrar(){
-
+//function mostrar(){
+/*
 	var nombre 
 	var edad
 	var apellido
@@ -47,8 +47,66 @@ function mostrar(){
 
 	alert(mensajeDeRespuesta);
 }
+*/
 
+//Bayón, Lucas
 
+//Clase de repaso 13/02/21
+/*1-con if
+pedir a una persona que fue de vaciones , la distancia que viajo y el tiempo que tardo, para calcular la velocidad
+e informar:
+60 km/hr = muy lento
+hata 80km/h= lento
+hasta 100= buen ritmo
+hasta 120= ahi de la ley
+mas = eso no se hace*/
 
+//Ejercicio usado: E/S Ej. 5
 
+function mostrar(){
 
+var distancia;
+var tiempo;
+var velocidad;
+var mensaje;
+
+distancia=document.getElementById('txtIdNombre').value;
+distancia=parseInt(distancia);
+
+tiempo=document.getElementById('txtIdEdad').value;
+tiempo=parseInt(tiempo);
+
+velocidad=distancia/tiempo;
+
+if(velocidad<61)
+{
+	mensaje="Muy lento";
+}
+else
+{
+	if(velocidad<81)
+	{
+		mensaje="Lento";
+	}
+	else
+	{
+		if(velocidad<101)
+		{
+			mensaje="Buen ritmo";
+		}
+		else
+		{
+			if(velocidad<121)
+			{
+				mensaje="Ahí de la ley";
+			}
+			else
+			{
+				mensaje="Eso no se hace";
+			}
+		}
+	}
+}
+console.log("Distancia: "+distancia+"Km. Tiempo: "+tiempo+"Hs. Velocidad: "+velocidad+"Km/H. "+mensaje);
+alert(mensaje);
+}
